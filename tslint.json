@@ -1,0 +1,47 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "ban": [
+            true,
+            {
+                "name": "package",
+                "message": "'package' is a keyword"
+            }
+        ],
+        "ban-types": [
+            true,
+            [
+                "Object",
+                "Use {} instead."
+            ],
+            [
+                "String",
+                "Use string instead."
+            ]
+        ],
+        "one-line": false,
+        "ordered-imports": false,
+        "no-console": false,
+        "no-consecutive-blank-lines": false,
+        "member-access": true,
+        "eofline": true,
+        "max-line-length": false,
+        "trailing-comma": false,
+        "arrow-parens": false,
+        "variable-name": false,
+        "member-ordering": false,
+        "forin": false,
+        "object-literal-sort-keys": false,
+        "no-empty": false,
+        "max-classes-per-file": false
+    },
+    "rulesDirectory": []
+}
