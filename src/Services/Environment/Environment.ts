@@ -25,7 +25,7 @@ export class Environment implements IEnvironment
         return false;
     }
 
-    public ValueOf(key: string): string
+    public ValueOf(key: string): string | undefined
     {
         if (!this.Exists(key))
         {
@@ -35,7 +35,7 @@ export class Environment implements IEnvironment
         return process.env[key];
     }
 
-    public ValueOrDefault(key: string, defaultValue: string): string
+    public ValueOrDefault(key: string, defaultValue: string): string | undefined
     {
         try
         {

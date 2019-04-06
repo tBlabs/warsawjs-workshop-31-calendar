@@ -10,16 +10,16 @@
         "npm": "5.3.0"
     },
     "scripts": {
-        "x_preinstall": "sudo npm i -g typescript jest tslint npm-run-all",
+        "x_preinstall": "npm i -g typescript jest tslint npm-run-all",
         "start": "node ./bin/startup.js",
-        "run": "npm run clean && npm run build && clear && npm run start",
+        "run": "npm run build && clear && npm run start",
         "watch": "tsc --watch",
         "monitor": "nodemon ./bin/startup.js",
-        "serve": "npm run clean && run-p watch monitor",
+        "serve": "run-p watch monitor",
         "lint": "tslint -c tslint.json './src/**/*.{ts,tsx}' --format msbuild",
         "test": "jest --runInBand",
         "build": "tsc -p .",
-        "clean": "rm ./bin -rf",
+        "clean": "rmdir .\\bin /s /q",
         "autofix": "tslint --fix --project .",
         "publish": "git push origin master"
     },
