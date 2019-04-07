@@ -8,7 +8,7 @@ import { IRunMode } from '../Services/RunMode/IRunMode';
 import { RunMode } from '../Services/RunMode/RunMode';
 import { ILogger } from '../Services/Logger/ILogger';
 import { Logger } from '../Services/Logger/Logger';
-import { Main } from '../Main';
+import { Main, EventsRepo, EventsRepo2 } from '../Main';
 import { IStartupArgs } from '../Services/Environment/IStartupArgs';
 import { StartupArgs } from '../Services/Environment/StartupArgs';
 import { Calculator } from '../Services/Calclulator';
@@ -23,6 +23,8 @@ try
     IoC.bind<Main>(Main).toSelf().inSingletonScope().whenTargetIsDefault();
     IoC.bind(Types.ILogger).to(Logger).inSingletonScope();
     IoC.bind(Calculator).toSelf().inTransientScope();
+    IoC.bind(EventsRepo).toSelf().inSingletonScope();
+    IoC.bind(EventsRepo2).toSelf().inSingletonScope();
 }
 catch (ex)
 {
